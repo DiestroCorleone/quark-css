@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="QUARK CSS | Un framework liviano y simple para desarrollo front end.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="CSS framework, lightweight CSS framework, open source, web design, web development">
+	<meta name="author" content="Diestro Corleone | https://github.com/DiestroCorleone">
+	<meta name="theme-color" content="#FFFAFA">
+	<link rel="manifest" href="manifest.json">
+	<script>
+		if('serviceWorker' in navigator){
+			navigator.serviceWorker.register('sw.js');
+		};
+	</script>
+	<link rel="stylesheet" href="quark.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel = "icon" href = "img/favicon.ico" size = "16x16" type = "image/ico">
+	<link rel="apple-touch-icon" href="img/icon.png">
+	<title>QUARK CSS | Un framework liviano y simple para desarrollo front end.</title>
+<!----------GOOGLE FONTS---------->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+<!----------QUARK CSS---------->
+	<style type="text/css">
+	/*Define colors and for your website*/
+		:root {
+			/*Body text color*/
+			--primary: black;
+			/*Body background color*/
+			--secondary: snow;
+			/*Main accent color*/
+			--tertiary: darkturquoise;
+			/*2nd accent color*/
+			--quaternary: #0BDE6A;
+			/*Main font*/
+			--main-font: Montserrat, sans-serif;
+			/*Secondary font*/
+			--secondary-font: Montserrat, sans-serif;
+		}	
+
+		nav a {
+			font-size: 0.7rem;
+		}	
+	</style>
+</head>
+<body id="body">
+<!----------NAV---------->
+	<nav class="col-full" id="menu">
+		<div class="col-full no-margin">
+			<ul class="flex flex-row between no-margin col-full text-center">
+				<!----------MANDATORY---------->
+				<li class="padded hover-border-bottom-md-tertiary"><a title="menú" href = "#menu" class="">&#9776;</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="cerrar menú" href = "#" class="">x</a></li>
+				<!----------YOUR LINKS HERE---------->
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Características" href="#caracteristicas">Características</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Qué necesitás" href="#que-necesitas">Qué necesitás</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="layout" href="#layout">Layout</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="sistema de grillas" href="#sistema-de-grillas">Grid system</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Texto" href="#texto">Texto</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Colores y fondos" href="#colores-y-fondos">Colores y fondos</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Bordes" href="#bordes">Bordes</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Imágenes" href="#imagenes">Imágenes</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Márgenes y padding" href="#margin-padding">Márgenes y padding</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Alturas" href="#alturas">Alturas</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Responsive" href="#responsiveness">Responsive</a></li>
+				<li class="padded hover-border-bottom-md-tertiary"><a title="Otros estilos" href="#otros-estilos">Otros estilos</a></li>
+				<li class="padded hover-border-bottom-md-tertiary" onclick="darkMode();" title="Toggle Dark Mode"><i class="fa fa-fw fa-lightbulb-o"></i></li>
+			</ul>
+		</div>
+	</nav>
+<!----------HEADER---------->
+	<header class="col-full grid-center text-center eighty-vh">
+		<div>
+			<h1 class="color-tertiary">QUARK CSS</h1>
+			<h3>Un framework liviano y simple para desarrollo front end.</h3>
+		</div>
+	</header>
+<!----------CARACTERÍSTICAS---------->
+	<main class="col-half no-margin padded-hard" id="caracteristicas">
+		<h2>Características</h2><br>
+		<ul>
+			<li>Incluye todo lo necesario para armar un sitio estático, con algunos extras.</li>
+			<li>Modo oscuro</li>
+			<li>Simple sistema de columnas con opciones basadas en <em>Flexbox</em> y <em>Grid</em></li>
+			<li>Íconos de <a href="https://www.w3schools.com/icons/fontawesome_icons_intro.asp" title="Font Awesome 4" class=" font-bold color-tertiary">Font Awesome 4</a> incluídos.</li>
+			<li>Características de personalización.</li>
+			<li>Responsivo.</li>
+		</ul>
+	</main><hr>
+<!----------COMENZANDO---------->
+	<div class="col-half no-margin padded-hard" id="que-necesitas">
+		<h2>Qué necesitás?</h2><br>
+		<p>Descargá el siguiente <a href="files/quark.zip" donwnload title="descargar quark HTML" class="font-bold color-tertiary">archivo ZIP</a></p>.
+		<p>El mismo contiene:</p><br>
+		<ul>
+			<li>El arhivo HTML <code>index-base.html</code>.</li>
+			<li>El archivo CSS <code>quark.css</code>.</li>
+			<li>El archivo JavaScript <code>quark-control.js</code>.</li>
+		</ul><br>
+		<h3>El HTML</h3><br>
+		<p>Es un template para arrancar tu sitio lo antes posible. Cuenta con links al archivo CSS, al JavaScript, y a Font Awsome, además de una barra de navegación responsive y varias otras etiquetas que son elementales en un sitio web (descripción, keywords, autor, theme-color, etc.).<br>Recordá que es fundamental que mantengas este template como base de tus páginas para el correcto funcionamiento de Quark.<br>En el <code>head</code> verás:</p><br>
+		<script src="https://gist.github.com/DiestroCorleone/87e31972e6a76a5e9beb4ddf621e1583.js"></script><br>
+		<p>Podés modificar el link a <code>"quark.css"</code> para dirigirlo al directorio donde hayas guardado el archivo.<br>Asimismo, en el final del sitio, te encontrarás con un <code>footer</code> predeterminado, cuyo contenido podrás modificar, asociado a un script al final del código, que mantendrá el sitio mostrando siempre el año actual. Además del link a <code>quark-control.js</code>, que también podés modificar si lo guardaste en otra ruta que no sea el directorio predeterminado.</p><br>
+		<script src="https://gist.github.com/DiestroCorleone/f6e0a85fd6693581f8d379a7d6f4fcc0.js"></script><br>
+		<p>Por último, notarás que la etiqueta <code>body</code> tiene por ID "body". Esto es necesario para que funcione el toggle de modo oscuro.</p><br>
+		<h3>Lo que deberás agregar</h3><br>
+		<h4>Google Fonts</h4><br>
+		<p>Dentro de la etiquetas <code>head</code>, debajo de la línea comentada <a href="https://fonts.google.com" title="Google Fonts"><code>GOOGLE FONTS</code></a>, pegá el link de las fuentes que hayas seleccionado. Quark CSS está preparado, out-of-the-box, para usar <strong>hasta dos fuentes</strong> predeterminadas.</p><br>
+		<script src="https://gist.github.com/DiestroCorleone/18f924cd7ecd355987b61e57bccceabe.js"></script><br>
+		<h4>Colores y fuentes predeterminadas</h4><br>
+		<p>Debajo del comentario <code>QUARK CSS</code>, definirás hasta 4 colores, que luego se aplicarán a todas las clases del framework (es fundamental que el <strong>primary</strong> sea el color de texto y el <strong>secondary</strong> el color de fondo, y que contrasten entre sí pues han de invertirse con del modo oscuro), y hasta 2 fuentes que hayas importado previamente con Google Fonts.</p><br>
+		<script src="https://gist.github.com/DiestroCorleone/bf14c66a55a7412e91856d7a6260d9e5.js"></script><br>
+		<h4>La barra de navegación</h4><br>
+		<p>El template incluye una <code>nav</code> por defecto, con estilos básicos para que ocupe todo el ancho superior de la pantalla.<br>Los primeros dos links no deben borrarse, pues son el botón de menú hamburguesa y cerrar en responsive. El último puede borrarse si no vas a emplear el toggle de modo oscuro, caso contrario dejarlo.<br>Entre ambas, podés agregar cuantos links tu web necesite.</p><br>
+		<script src="https://gist.github.com/DiestroCorleone/29d053cab1e3b3bf4b6d06c14f637009.js"></script><br>
+		<h4>Y listo!</h4><br>
+		<p>Ya podés comenzar a usar Quark CSS para armar tu página en tiempo record!</p><br>
+		<h2 id="layout">Layout</h2><br>
+		<p>Estas clases, aplicadas a un <code>div</code> o la etiqueta que prefieras (se pueden combinar), aplicarán lo siguiente:</p><br>
+		<ul>
+			<li>
+				<code>grid-center</code>: Tu contenedor tendrá un <code>display: grid</code> y <code>align-items: center</code>, ideal para centrar elementos. 
+			</li>
+			<li>
+				<code>flex</code>: Anadirá <code>display: flex</code> al contenedor, para luego aplicar lo que sigue.
+			</li>
+			<li>
+				<code>flex-row</code> y <code>flex-column</code>: Elegí la orientación del flex. Ambas <strong>se volverán columnas en responsive</strong>, así que si querés que sigan siendo filas en pantallas pequeñas, deberás optar por <code>flex-row-on-phone</code>.
+			</li>
+			<li>
+				<code>between</code> y <code>around</code>: Combinadas con <code>flex</code>, añadirán <code>justify-content</code> de <code>space-between</code> o <code>around</code> según corresponda.
+			</li>
+		</ul><br>
+		<h2 id="sistema-de-grillas">Sistema de grilla</h2><br>
+		<p>Con las siguientes clases podrás armar un layout responsivo para tu sitio.</p><br>
+		<ul>
+			<li>
+				<code>col-full</code>: Un ancho del 100%.
+			</li>
+			<li>
+				<code>col-3-quarter</code>: Un ancho de 75%.
+			</li>
+			<li>
+				<code>col-2-third</code>: 66%.
+			</li>
+			<li>
+				<code>col-half</code>: 50%. 
+			</li>
+			<li>
+				<code>col-2-third</code>: 66%.
+			</li>
+			<li>
+				<code>col-quarter</code>: 25%.
+			</li>
+		</ul><br>
+		<p>En responsive, todas adoptarán <strong>un ancho del 100%</strong>.</p><br>
+		<h2 id="texto">Texto y alineación</h2><br>
+		<p>Bastante autoexplicativas.</p><br>
+		<ul>
+			<li>
+				<code>main-font</code> y <code>secondary-font</code>: Según definamos en el head.
+			</li>
+			<li>
+				<code>font-bold</code> y <code>font-light</code>.
+			</li>
+			<li>
+				<code>text-center</code>, <code>text-left</code> y <code>text-right</code>.
+			</li>
+			<li>
+				<code>text-shadow</code>: Suave sombra paralela para textos.
+			</li>
+		</ul><br>
+		<h2 id="colores-y-fondos">Colores y fondos</h2><br>
+		<p>De acuerdo a los colores elegidos en el head, podrás aplicar el siguiente las siguientes clases para definir colores de texto y fondo.</p><br>
+		<ul>
+			<li>
+				<code>color-primary</code>, <code>color-secondary</code>, <code>color-tertiary</code>, <code>color-quaternary</code>: Aplicarán el color correspondiente al texto del elemento.
+			</li>
+			<li>
+				<code>back-primary</code>, <code>back-secondary</code>, <code>back-tertiary</code>, <code>back-quaternary</code>: Un fondo del color elegido.
+			</li>
+		</ul><br>
+		<p>Los hovers de color y background son similares a los anteriores, añadiendo <code>hover-</code> al inicio del nombre de las clases (<code>hover-color-primary</code>, <code>hover-back-secondary</code>, etc.)</p><br>
+		<h2 id="bordes">Bordes y hover</h2><br>
+		<p>Empleando los colores que definimos en el encabezado, podrás aplicar el siguiente set de clases para definir bordes y hover states.</p><br>
+		<ul>
+			<li>
+				<code>border-sm-primary</code>, <code>border-sm-secondary</code>, <code>border-sm-tertiary</code>, <code>border-sm-quaternary</code>: Aplicarán un fino borde del color correspondiente.
+			</li>
+			<li>
+				<code>border-md-primary</code>, <code>border-md-secondary</code>, <code>border-md-tertiary</code>, <code>border-md-quaternary</code>: Un borde de 2px del color elegido.
+			</li>
+			<li>
+				<code>border-bottom-sm-primary</code>, <code>border-bottom-sm-secondary</code>, <code>border-bottom-sm-tertiary</code>, <code>border-bottom-sm-quaternary</code>: Aplicarán un fino border bottom del color correspondiente.
+			</li>
+			<li>
+				<code>border-bottom-md-primary</code>, <code>border-bottom-md-secondary</code>, <code>border-bottom-md-tertiary</code>, <code>border-bottom-md-quaternary</code>: Un border bottom de 2px del color elegido.
+			</li>
+		</ul><br>
+		<p>Los hovers de border son similares a los anteriores, añadiendo <code>hover-</code> al inicio del nombre de las clases (<code>hover-border-sm-primary</code>, <code>hover-border-bottom-md-primary</code>, etc.)</p><br>
+		<h2 id="imagenes">Imágenes</h2><br>
+		<p>Las clases que te ayudarán con las imágenes (aunque pueden aplicarse a cualquier elemento) son:</p><br>
+		<ul>
+			<li>
+				<code>img-responsive</code>: Dará un <code>width: 100%</code> y <code>height: auto</code>. 
+			</li>
+			<li>
+				<code>cover</code>, <code>contain</code>, <code>fill</code>: Darán el <code>object-fit</code> correspondiente al elemento aplicado. 
+			</li>
+		</ul><br>
+		<h2 id="margin-padding">Márgenes y padding</h2><br>
+		<ul>
+			<li>
+				<code>margin-xsm</code>, <code>margin-sm</code> y <code>margin-md</code>: Márgenes de menor a mayor.
+			</li>
+			<li>
+				<code>no-margin</code>: Un <code>margin: 0 auto</code>, también útil para centrar horizontalmente.
+			</li>
+			<li>
+				<code>padded-sm</code>, <code>padded</code>, <code>padded-hard</code>: Paddings de menor a mayor.
+			</li>
+		</ul><br>
+		<h2 id="alturas">Alturas</h2><br>
+		<ul>
+			<li>
+				<code>full-height</code> y <code>full-vh</code>: Alturas de 100% y 100vh, respectivamente.
+			</li>
+			<li>
+				<code>eighty-vh</code>: Altura de 80vh.
+			</li>
+			<li>
+				<code>half-height</code> y <code>half-vh</code>: Alturas de 50% y 50vh, respectivamente.
+			</li>
+			<li>
+				<code>third-height</code>: Altura de 30%.
+			</li>
+			<li>
+				<code>auto-height</code>: Altura automática.
+			</li>
+		</ul><br>
+		<h2 id="responsiveness">Responsive</h2><br>
+		<ul>
+			<li>
+				<code>show-on-phone</code>: Elemento que no se mostrará a menos que el viewpoint sea de 800px o menos.
+			</li>
+			<li>
+				<code>hide-on-phone</code>: Este es lo opuesto, se oculta en un viewport de 800px o menos.
+			</li>
+		</ul><br>
+		<h2 id="otros-estilos">Otros estilos</h2><br>
+		<ul>
+			<li>
+				<code>parallax</code>: Esta clase aplicará el popular efecto al contenedor que tenga la imagen de fondo.
+			</li>
+			<li>
+				<code>rounded-soft</code> y <code>rounded-hard</code>: Redonderá los bordes del elemento con dos intensidades, menor y mayor.
+			</li>
+			<li>
+				<code>box-shadow</code>: Sombra paralela para el elemento elegido.
+			</li>
+			<li>
+				<code>over-hidden</code>: Esconderá el overflow del contenedor al que lo apliquemos.
+			</li>
+			<li>
+				<code>invisible</code>: <code>display: none</code> para aquello a lo que lo apliquemos.
+			</li>
+			<li>
+				<code>float-button</code>: Un botón flotante en la esquina inferior derecha, para lo que deseemos; <em>volver arriba</em>, contacto por <em>WhatsApp</em>, etc.
+			</li>
+		</ul>		
+	</div>
+<!----------FOOTER---------->
+	<footer class="back-tertiary color-secondary padded-hard text-center">
+		<small>Developed with &#9829; by <a href="https://github.com/DiestroCorleone" target="_blank" title="GitHub Diestro Corleone">Diestro Corleone</a> - <span id="year"></span></small>
+	</footer>
+<!---------SCRIPTS--------->
+<script type="text/javascript" src="quark-control.js"></script>
+<script type="text/javascript">
+window.onload = () => showYear();
+
+function showYear(){
+	const year = new Date().getFullYear();
+	document.getElementById("year").innerHTML = year;
+}
+</script>
+</body>
+</html>
