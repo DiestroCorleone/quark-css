@@ -105,6 +105,10 @@ a, button{
 
 /*Grid system*/
 
+.col-full{
+	width: 100%;
+}
+
 .col-quarter{
 	width: 25%;
 }
