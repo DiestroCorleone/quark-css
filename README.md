@@ -2,7 +2,7 @@
 
 ## Un framework liviano y simple para desarrollo front end.
 
-![v1.0.1](https://img.shields.io/github/v/release/DiestroCorleone/quark-css?display_name=tag)
+![v1.1.1](https://img.shields.io/github/v/release/DiestroCorleone/quark-css?display_name=tag)
 
 ### Características
 
